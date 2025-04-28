@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: 'Segoe UI', system-ui, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  min-height: 100vh;
+  min-width: 320px;
+}
+
+#root {
+  width: 100%;
+  height: 100vh;
+}
+
+@layer components {
+  .message-bubble-in {
+    @apply bg-whatsapp-bubble-in dark:bg-whatsapp-dark-secondary rounded-lg py-2 px-3 max-w-[75%] shadow-sm;
+  }
+  
+  .message-bubble-out {
+    @apply bg-whatsapp-bubble-out dark:bg-whatsapp-bubble-out/90 rounded-lg py-2 px-3 max-w-[75%] shadow-sm;
+  }
+
+  .scrollbar-thin {
+    scrollbar-width: thin;
+  }
+  
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  .scrollbar-thin::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+  
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    @apply bg-gray-300 dark:bg-gray-600 rounded-full;
+  }
+  
+  .sidebar-item {
+    @apply flex items-center gap-x-3 py-3 px-4 rounded-lg transition-colors hover:bg-gray-100 dark:hover:bg-whatsapp-dark-secondary/50 cursor-pointer;
+  }
+  
+  .sidebar-item.active {
+    @apply bg-gray-100 dark:bg-whatsapp-dark-secondary/50;
+  }
+}
+
+.emoji-picker-container {
+  position: absolute !important;
+  bottom: 60px;
+  left: 0;
+  z-index: 100;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-slide-in {
+  animation: slideIn 0.3s ease-in-out;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
