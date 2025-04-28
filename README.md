@@ -1,7 +1,10 @@
 # WhatsApp Monitoring
 A modern WhatsApp Web clone built with React and Socket.IO that provides real-time chat functionality and monitoring capabilities.
 
-![WhatsApp Monitoring Screenshot](https://i.ibb.co/VqXNyP8/whatsapp-monitoring.png)
+![WhatsApp Monitoring Screenshot](/img/Dashboard.png) 
+![WhatsApp Monitoring Screenshot](/img/device.png) 
+![WhatsApp Monitoring Screenshot](/img/chat.png) 
+
 
 ## Features
 - 🚀 Modern dashboard with real-time statistics
